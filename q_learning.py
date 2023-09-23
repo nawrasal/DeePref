@@ -17,7 +17,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 from torch.autograd import Variable
-import common.cloud_net
+#import common.cloud_net
 from common.params import *
 from common.models import *
 #from common.common import *

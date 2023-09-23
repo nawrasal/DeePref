@@ -27,7 +27,7 @@ For our experiments, we use `python3.10`; while other versions of python will pr
 
 ### Creating Environment
 
-First, create a conda environement with `python3.10`, and then install the dependencies. This can be done with:
+First, create a conda environement with `python3.10`, then install the required dependencies. This can be done with:
 
 ```bash
 conda create -n DeePref python=3.10
@@ -56,13 +56,14 @@ Our experiment script is `q_learning.py`. It has some required arguments while o
 python q_learning.py --EC 10 --algo DRQN --edge_id 0 --mode train --run_id 0
 ```
 
-It will run DeePref at edge network to train an agent with edge capacity of '10'.
+It will run DeePref at edge network to train an agent with edge capacity of '10' items. The training results will be saved under 'results' directory, and the model will be stored in 'DRQN_models' directory.
+
 Further, we used 'codecarbon' to track carbon emissions produced by our code. To disable, please comment the related lines in 'q_learning.py' script.
 
 ### Experiment Argument Details
 
 | Argument | Required | Default | Description |
-| -------- | ----------- | -------- | ----------- |
+| ------------- | ----------- | -------- | ----------- |
 | `--EC` | Yes | N/A | Edge storage capacity that is containing the prefetched items. |
 | `--NO_edges` | No | 3 | How many edge nodes participating in the prefetching experiment. In our experiments, we used 2 edge nodes for testing and 1 edge node for transfer learning. |
 | `--algo` | Yes | DRQN | Prefetching head being used (e.g., DQN, DRQN, Belady_prefetch, top_k_size, top_k_popularity, popularity_recent, popularity_all). |

@@ -4,3 +4,5 @@ lru-dict==1.2.0
 scikit-learn==1.2.0
 pathlib==1.0.1
 codecarbon==2.3.1
+numpy==1.23.0
+chardet==5.2.0
