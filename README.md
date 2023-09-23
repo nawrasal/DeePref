@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 ### Installing Pytorch
 
-Second, install 'pytorch' into your virtual environement from [source](https://pytorch.org/get-started/locally/). For our experiments, we used 'torch' version '2.0.0'. To install on Linux or Windows, you can use the following commands:
+Second, install 'pytorch' into your virtual environement from [source](https://pytorch.org/get-started/locally/). For our experiments, we used 'pytorch' version '2.0.0' with 'cuda' version '11.7'. To install on Linux or Windows, you can use the following commands:
 
 ```bash
 # CUDA 11.7
