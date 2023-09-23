@@ -2,7 +2,7 @@
 
 DeePref is a deep reinforcement learning agent for prefetching video content from cloud networks to edge networks in Content Delivery Networks (CDNs).
 DeePref leverages [DQN](https://www.nature.com/articles/nature14236) and [DRQN](https://arxiv.org/abs/1507.06527) to effectively encode the agent's history for solving the prefetching problem at edge networks as Partially Observable Markov Decision Process (POMDP).
-DeePref is a prefetching algorithm that is agnostic to the hardware design, operating system, and applications/workloads. Our approach takes only the request ID to make future prefetching decisions that are sensitive, in terms of latency, to the upstream network.
+DeePref is a prefetching algorithm that is agnostic to the hardware design, operating system, and applications/workloads. Our approach takes only the request ID to effectively make future prefetching decisions.
 
 Our paper is now publicly available on ....!
 You can read it [here](....).
