@@ -160,15 +160,16 @@ class EDGE():
 					return action.item()
 				elif args.algo == "DQN":
 					selected_action = np.random.choice([i for i in self.movies_list if i not in self.agents[ID].edge_storage_LRU.keys()])
-					action= torch.tensor([[selected_action]], device=self.device, dtype=torch.long)
+					selected_action = np.array([selected_action])
+					action= torch.tensor([selected_action], device=self.device, dtype=torch.long)
 					return action.item()
 
 		elif args.exploration == "softmax":
 			with torch.no_grad():
 				if args.algo == "DRQN":
 					#print(state)
-					X = torch.tensor([self.seq], device=self.device, dtype=torch.float)
-
+					seq = np.array([self.seq])
+					X = torch.tensor(seq, device=self.device, dtype=torch.float)
 					qval, _ = self.policy_net(X, policy_net_optim=False)
 					action_val = qval[:, -1, :] #select last element of seq
 					softmax_probs = F.softmax(action_val/Temperature, dim=1)
@@ -198,7 +199,8 @@ class EDGE():
 			if args.algo == "DRQN":
 				#assuming we have access to the hidden layer when evaluating (the hidden layer isn't reset)
 				#print(state)
-				X = torch.tensor([self.seq], device=self.device, dtype=torch.float)
+				seq = np.array([self.seq])
+				X = torch.tensor(seq, device=self.device, dtype=torch.float)
 				qval, _ = self.policy_net(X, policy_net_optim=False)
 				action = qval[:, -1, :] #select last element of seq
 				action = action.max(1)[1].view(1,1)
