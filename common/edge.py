@@ -133,7 +133,8 @@ class EDGE():
 				with torch.no_grad():
 					if args.algo == "DRQN":
 						#print(state)
-						X = torch.tensor([self.seq], device=self.device, dtype=torch.float)
+						seq = np.array([self.seq])
+						X = torch.tensor(seq, device=self.device, dtype=torch.float)
 						qval, _ = self.policy_net(X, policy_net_optim=False)
 						action_val = qval[:, -1, :] #select last element of seq
 						action = action_val.max(1)[1].view(1,1)

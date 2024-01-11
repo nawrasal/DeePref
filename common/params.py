@@ -80,12 +80,12 @@ print("len(movie_2_idx.values())", len(movie_2_idx.values()))
 
 #LSTM for both LSTM classifier and DRQN
 hidden_size=512
-num_layers=1
+num_layers=2
 num_directions = 1
 body_size = 512
 POLICY_UPDATE= 1
 TARGET_UPDATE = 100
-BATCH_SIZE = 10
+BATCH_SIZE = 32
 dropout = 0 #for LSTM classifier
 
 if args.algo == "DRQN":
@@ -103,8 +103,8 @@ if args.algo == "DRQN":
 	input_shape = (input_size,)
 	print("input_shape", input_shape)
 	#TBPTT params
-	k1= 500
-	k2= 500
+	k1= 300
+	k2= 300
 
 	# # #cloud approach
 	# if args.approach == "cloud":

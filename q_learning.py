@@ -31,7 +31,7 @@ from scipy.interpolate import make_interp_spline, BSpline
 import os
 import glob
 from pathlib import Path
-from codecarbon import OfflineEmissionsTracker
+#from codecarbon import OfflineEmissionsTracker
 import multiprocessing
 import time
 ###########
@@ -90,10 +90,10 @@ def run():
 	#get dir
 	file_name = str(args)[10:]
 
-	if str(device) == "cuda":
-		#tracking CO emissions
-		tracker = OfflineEmissionsTracker(country_iso_code="USA") #for tracking carbon emissions
-		tracker.start()
+	# if str(device) == "cuda":
+	# 	#tracking CO emissions
+	# 	tracker = OfflineEmissionsTracker(country_iso_code="USA") #for tracking carbon emissions
+	# 	tracker.start()
 	#####initilaize edges
 	#global last_edge_items
 	if args.approach == "edge":
@@ -214,8 +214,8 @@ def run():
 
 		#run
 
-		print("#time_steps ", edge_df.index.size)
-		print(edge_df)
+		#print("#time_steps ", edge_df.index.size)
+		#print(edge_df)
 		for i in  range(0, edge_df.index.size,step_size):
 			#print("time_step %i" % i, "total time_steps %i" % train_df.index.size)
 			#take a step
@@ -227,6 +227,8 @@ def run():
 			if i == edge_df.where(edge_df["group"]== 0).last_valid_index() or i == edge_df.where(edge_df["group"]== 1).last_valid_index() or i == edge_df.where(edge_df["group"]== 2).last_valid_index() : #ID=0a
 				edge.agents[ID].done = True
 				metrics_tuple = edge.agents[ID].end_of_episode()
+				print(metrics_tuple)
+				print("***********************************")
 				if ID == 0 or ID == 2:
 					save_episode(metrics_tuple, i_episode, file_path_0)
 				else:
@@ -277,9 +279,9 @@ def run():
 			# np.save("./train_results/" + file_name, train_results, allow_pickle=True)
 
 
-	if str(device) == "cuda":
-		emissions: float = tracker.stop()
-		print(f"Emissions: {emissions} kg")
+	# if str(device) == "cuda":
+	# 	emissions: float = tracker.stop()
+	# 	print(f"Emissions: {emissions} kg")
 
 def main():
 	run()
