@@ -1,4 +1,5 @@
 common/__pycache__/
+common/.DS_Store
 common/cloud_net.py
 results/
 datasets/ml-1m
