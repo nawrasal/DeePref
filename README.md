@@ -83,7 +83,7 @@ Further, we used 'codecarbon' to track carbon emissions produced by our code. To
 
 
 ## Citing DeePref
-
+```shell
 To cite this work, please use the following bibtex:
 
 @article{alkassab2023deepref,
@@ -92,4 +92,5 @@ To cite this work, please use the following bibtex:
   journal={arXiv preprint arXiv:2310.07881},
   year={2023}
 }
+```
 
