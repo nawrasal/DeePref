@@ -83,9 +83,9 @@ Further, we used 'codecarbon' to track carbon emissions produced by our code. To
 
 
 ## Citing DeePref
-```shell
-To cite this work, please use the following bibtex:
 
+To cite this work, please use the following bibtex:
+```shell
 @article{alkassab2023deepref,
   title={DeePref: Deep Reinforcement Learning For Video Prefetching In Content Delivery Networks},
   author={Alkassab, Nawras and Huang, Chin-Tser and Botran, Tania Lorido},
