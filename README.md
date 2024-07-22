@@ -1,11 +1,11 @@
 # DeePref: Deep Reinforcement Learning For Video Prefetching In Content Delivery Networks
 
-DeePref is a deep reinforcement learning agent for prefetching video content from cloud networks to edge networks in Content Delivery Networks (CDNs).
-DeePref leverages [DQN](https://www.nature.com/articles/nature14236) and [DRQN](https://arxiv.org/abs/1507.06527) to effectively encode the agent's history for solving the prefetching problem at edge networks as Partially Observable Markov Decision Process (POMDP).
-DeePref is a prefetching algorithm that is agnostic to the hardware design, operating system, and applications/workloads. Our approach takes only the request ID to effectively make future prefetching decisions.
+DeePref is a deep reinforcement learning agent for prefetching video content on edge networks in Content Delivery Networks (CDNs).
+DeePref leverages [DQN](https://www.nature.com/articles/nature14236) and [DRQN](https://arxiv.org/abs/1507.06527) to effectively encode the agent's history to make auto-aggressive prefetching decisions at edge networks.
+DeePref is a prefetcher that is agnostic to the hardware design, operating system, and applications/workloads in which it utilizes only the video ID to effectively make future prefetching decisions. DeePref outperforms baseline approaches that use video
+content popularity as a building block to statically or dynamically make prefetching decision.
 
-Our paper is now publicly available on ....!
-You can read it [here](....).
+Our paper is available on arXiv! You can read it [here](https://arxiv.org/abs/2310.07881).
 
 
 ## Table of Contents
@@ -82,14 +82,14 @@ Further, we used 'codecarbon' to track carbon emissions produced by our code. To
 
 
 
-## Citing DTQN
+## Citing DeePref
 
-To cite this paper/code in publications, please use the following bibtex:
+To cite this work, please use the following bibtex:
 
-```bibtex
-....................
-```
+@article{alkassab2023deepref,
+  title={DeePref: Deep Reinforcement Learning For Video Prefetching In Content Delivery Networks},
+  author={Alkassab, Nawras and Huang, Chin-Tser and Botran, Tania Lorido},
+  journal={arXiv preprint arXiv:2310.07881},
+  year={2023}
+}
 
-## Contributing
-
-Feel free to open a pull request with updates, contributions, and modifications.

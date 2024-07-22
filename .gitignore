@@ -1,1 +1,4 @@
 common/.DS_Store
+datasets/ml-1m
+datasets/_us_census.csv
+datasets/us_census.csv
