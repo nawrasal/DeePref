@@ -86,11 +86,13 @@ Further, we used 'codecarbon' to track carbon emissions produced by our code. To
 
 To cite this work, please use the following bibtex:
 ```shell
-@article{alkassab2023deepref,
+@inproceedings{alkassab2024deepref,
   title={DeePref: Deep Reinforcement Learning For Video Prefetching In Content Delivery Networks},
   author={Alkassab, Nawras and Huang, Chin-Tser and Botran, Tania Lorido},
-  journal={arXiv preprint arXiv:2310.07881},
-  year={2023}
+  booktitle={2024 33rd International Conference on Computer Communications and Networks (ICCCN)},
+  pages={1--6},
+  year={2024},
+  organization={IEEE}
 }
 ```
 
